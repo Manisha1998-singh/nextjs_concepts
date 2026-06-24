@@ -4,7 +4,6 @@ export const metadata: Metadata = {
   title: {
     default: "Next.js - by Manisha",
     template: "%s | by Manisha",
-    absolute: "",
   },
   description: "Generate by Next.js",
 };
