@@ -1,18 +1,18 @@
 import { Card } from "@/app/components/card";
 import Link from "next/link";
 
-export default function Notifications() {
+export default function ArchivedNotifications() {
   return (
     <Card>
-      <div>Notifications</div>
+      <div> Archived Notifications</div>
       <div>
         <Link
-          href="/dashboard/archived"
+          href="/dashboard"
           style={{
             color: "red",
             textDecoration: "underline",
           }}>
-          Archived
+          Default
         </Link>
       </div>
     </Card>
