@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-
+import { ErrorWrapper } from "./error-wrapper";
 export const metadata: Metadata = {
   title: {
     default: "Next.js - by Manisha",
@@ -19,7 +19,10 @@ export default function RootLayout({
         <header style={{ backgroundColor: "lightblue", padding: "1rem" }}>
           <p>Header</p>
         </header>
-        <div>{children}</div>
+        <div>
+          {children}
+          <ErrorWrapper>{children}</ErrorWrapper>
+        </div>
         <footer style={{ backgroundColor: "lightblue", padding: "1rem" }}>
           <p>Footer</p>
         </footer>
