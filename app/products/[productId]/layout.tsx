@@ -1,7 +1,20 @@
-export default function AuthLayout({
+function getRandomInt(count: number) {
+  return Math.floor(Math.random() * count);
+}
+export default function ProductLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return <div>{children}</div>;
+  const random = getRandomInt(2);
+  if (random === 1) {
+    throw new Error("Error loading Product");
+  }
+
+  return (
+    <>
+      <div>{children}</div>
+      <h1>This is product feature</h1>
+    </>
+  );
 }
