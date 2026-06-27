@@ -6,5 +6,5 @@ export default async function Blog() {
       resolve("intentional delay");
     }, 200);
   });
-  return <div>list dataaa</div>;
+  return <div>list data</div>;
 }
