@@ -5,13 +5,6 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -23,4 +16,66 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+.slider-container {
+  min-height: 0;
+  min-width: 0;
+  padding: 20px;
+}
+.button,
+.variable-width .slick-slide p,
+h3 {
+  background: #2e8555;
+  color: #fff;
+}
+.slick-next:before,
+.slick-prev:before {
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  opacity: 0.75;
+  color: #2e8555;
+}
+.variable-width .slick-slide p,
+h3 {
+  line-height: 100px;
+  text-align: center;
+}
+h3 {
+  font-size: 24px;
+  padding: 0;
+}
+.slick-dots {
+  bottom: -25px;
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+.slick-next,
+.slick-prev {
+  border: none;
+  cursor: pointer;
+  display: block;
+  font-size: 0;
+  height: 20px;
+  line-height: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+}
+.slick-prev {
+  left: -25px;
+}
+.slick-next:before,
+.slick-prev:before {
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  opacity: 0.75;
+  color: #982073;
 }
