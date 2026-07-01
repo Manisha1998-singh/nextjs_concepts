@@ -1,10 +1,11 @@
 "use client";
-
+import { useTheme } from "../components/theme-provider";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function ClientRoutePage() {
+  const theme = useTheme();
   const settings = {
     dots: true,
     infinite: true,
@@ -15,29 +16,7 @@ export default function ClientRoutePage() {
 
   return (
     <>
-      <div>Client Route Page </div>
-      <div className="slider-container">
-        <Slider {...settings}>
-          <div>
-            <h3>1</h3>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-        </Slider>
-      </div>
+      <div style={{ color: theme.colors.primary }}>Client Route Page </div>
     </>
   );
 }
